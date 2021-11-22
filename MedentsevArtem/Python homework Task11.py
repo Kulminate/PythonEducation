@@ -1,15 +1,18 @@
 def painting():
     a = int(input('Enter a number:'))
     stars = ''
+    # first triangle
     for i in range(a):
         stars += '*'
         print(stars)
     cnt = a
+    # second triangle
     for i in range(a):
         cnt -= 1
         stars = ' ' * cnt + '*' * i
         print(stars)
     stars = ''
+    # third triangle
     if a > 3:
         for i in range(a - 2):
             stars += '*'
