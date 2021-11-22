@@ -41,3 +41,6 @@ for n in str(some_int):
     sum+=int(n)
 print(f"\nSum of digits of an integer {some_int} is {sum}")
 
+newstring = "Hello beautiful World!"
+your_char = input("\nEnter some character ")
+print(newstring.count(your_char))
