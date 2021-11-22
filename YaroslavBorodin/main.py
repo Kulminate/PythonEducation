@@ -57,3 +57,8 @@ for n in range(1, 8):
         print("*" * n)
     else:
         print("*" * (8-n))
+
+from math import gcd
+int1 = 33
+int2 = 11
+print(f"\nGreatest common factor of int1 = {int1} and int2 = {int2} is {gcd(int1, int2)}")
