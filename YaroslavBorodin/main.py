@@ -34,3 +34,10 @@ print(f"Exchange of values: a = {a}, b = {b}")
 q = 56
 w = 9
 print(f"\nq = {q}, w = {w}\nq/w = {q / w}")
+
+some_int = 695
+sum = 0
+for n in str(some_int):
+    sum+=int(n)
+print(f"\nSum of digits of an integer {some_int} is {sum}")
+
