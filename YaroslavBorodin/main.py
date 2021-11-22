@@ -25,6 +25,8 @@ a = b
 b = buf
 print(f"Exchange of values: a = {a}, b = {b}")
 
-
-
-
+a = True
+b = "71"
+print(f"\na = {a}, b = {b}")
+a, b = b, a
+print(f"Exchange of values: a = {a}, b = {b}")
