@@ -17,7 +17,13 @@ if(some_string==some_string[::-1]):
 else:
     print("This string isnt palindrome")
 
-
+a = 6
+b = "s"
+print(f"\na = {a}, b = {b}")
+buf = a
+a = b
+b = buf
+print(f"Exchange of values: a = {a}, b = {b}")
 
 
 
