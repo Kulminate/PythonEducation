@@ -30,3 +30,7 @@ b = "71"
 print(f"\na = {a}, b = {b}")
 a, b = b, a
 print(f"Exchange of values: a = {a}, b = {b}")
+
+q = 56
+w = 9
+print(f"\nq = {q}, w = {w}\nq/w = {q / w}")
