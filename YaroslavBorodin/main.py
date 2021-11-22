@@ -44,3 +44,16 @@ print(f"\nSum of digits of an integer {some_int} is {sum}")
 newstring = "Hello beautiful World!"
 your_char = input("\nEnter some character ")
 print(newstring.count(your_char))
+
+for n in range(1, 7):
+    print("*" * n)
+
+
+for n in range(1, 7):
+    print(f'{" " * (6-n)}{"*"*n}')
+
+for n in range(1, 8):
+    if (n < 4):
+        print("*" * n)
+    else:
+        print("*" * (8-n))
