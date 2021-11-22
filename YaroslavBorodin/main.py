@@ -11,6 +11,11 @@ num = int(input("Enter some number "))
 print("Your number: {}".format(num))
 print("Your number squared: {}\n".format(num**2))
 
+some_string = input("Enter some string: ")
+if(some_string==some_string[::-1]):
+    print("This string is palindrome")
+else:
+    print("This string isnt palindrome")
 
 
 
