@@ -1,11 +1,12 @@
 star = ' * '
 space = " "
 
-#first triangle
+#First triangle
 
 for i in range(7):
     print(star * i)
 print("")
+
 #Second triangle
 
 count_space = 5
