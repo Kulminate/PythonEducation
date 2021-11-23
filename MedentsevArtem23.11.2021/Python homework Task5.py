@@ -10,5 +10,7 @@ def triangle_sum(a):
     print(summary)
 
 
-
-triangle_sum(int(input()))
+try:
+    triangle_sum(int(input('Enter your number:')))
+except(ValueError, UnboundLocalError):
+    print('That is not a digit. Please, rerun the algorithm.')
