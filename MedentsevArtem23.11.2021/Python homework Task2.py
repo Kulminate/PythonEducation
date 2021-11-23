@@ -10,4 +10,4 @@ def list_and_tuple_creator(a):
 
 
 
-list_and_tuple_creator(input('Enter number range:'))
+list_and_tuple_creator(input('Enter number range (you can use space or any symbols besides digits to split numbers):'))

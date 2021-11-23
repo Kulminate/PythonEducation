@@ -10,4 +10,4 @@ def cyclical_shift(myrange):
 try:
     cyclical_shift(int(input('Enter a digit:')))
 except(ValueError, UnboundLocalError):
-    print('That is not a digit.')
+    print('That is not a digit. Please, rerun the algorithm.')

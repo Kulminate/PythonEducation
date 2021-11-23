@@ -16,6 +16,6 @@ def cyclical_shift(l, h):
 
 
 try:
-    cyclical_shift(int(input('Enter a digit length:')), int(input('Enter a digit hight')))
+    cyclical_shift(int(input('Enter a digit length:')), int(input('Enter a digit height')))
 except(ValueError, UnboundLocalError):
     print('That is not a digit.')
