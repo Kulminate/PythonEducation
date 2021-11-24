@@ -8,6 +8,7 @@ def dict_range(a, b):
             l3.append(l2[l1.index(i)])
     print(l3)
 
+
 try:
     dict_range(int(input('Enter first number:')), int(input('Enter second number:')))
 except(ValueError, UnboundLocalError):

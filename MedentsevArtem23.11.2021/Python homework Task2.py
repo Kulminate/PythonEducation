@@ -18,7 +18,4 @@ def list_and_tuple_creator(a):
     print(lst, t, sep='\n')
 
 
-
-
-
 list_and_tuple_creator(input('Enter number range:'))
