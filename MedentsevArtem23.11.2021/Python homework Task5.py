@@ -1,6 +1,6 @@
 def triangle_sum(a):
-    cnt1 = 1
-    cnt2 = 1
+    cnt1 = 1 # digit
+    cnt2 = 1 # string of the triangle
     for i in range(a):
         summary = 0
         for j in range(cnt2):
