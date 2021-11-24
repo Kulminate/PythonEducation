@@ -3,11 +3,17 @@
 # чьи значения попадают в диапазон (x,y)
 
 def name_keys(old_dict, x, y):
-    for dict_item in old_dict.items():
-        if x <= dict_item[1] <= y:
-            print(dict_item[0])
+    result = list()
+    if x > y:
+        temp = x
+        x = y
+        y = temp
+    for k, v in old_dict.items():
+        for item in range(x, y + 1):
+            if v == item:
+                result.append(k)
+    return result
 
 
 my_dict = {'a': 11, "b": 12, 'c': 17, 'd': 23, 'e': 12}
-name_keys(my_dict, 13, 40)
-
+print(name_keys(my_dict, 1, 12))
