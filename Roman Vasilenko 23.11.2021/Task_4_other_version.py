@@ -15,7 +15,7 @@ insert_dict = { 'a': 11,
                 'd': 23,
                 'e': 12
 }
-left_range = 0
-right_range = 13
+left_range = int(input('Enter left range: '))
+right_range = int(input('Enter left range: '))
 
 numbers_matched_range(insert_dict, left_range, right_range)
