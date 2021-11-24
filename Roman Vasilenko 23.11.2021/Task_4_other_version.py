@@ -1,6 +1,9 @@
 def numbers_matched_range(dictionary, left_range, right_range):
     result_list = []
 
+    if right_range < left_range:
+        right_range, left_range = left_range, right_range
+
     for value in dictionary.items():
         if left_range <= value[1] <= right_range:
             result_list.append(value[0])
