@@ -29,8 +29,5 @@ def main(a, b, x):
         return'Деление на ноль недопустимо'
 
 
-
-
-
 print(arithmetic('1', '0', '/'))
 
