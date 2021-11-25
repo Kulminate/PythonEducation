@@ -24,10 +24,10 @@ def main(a, b, x):
         elif x == '/':
             return a / b
         else:
-            return "Неизвестная операция"
+            return 'Неизвестная операция'
     except ZeroDivisionError:
         return'Деление на ноль недопустимо'
 
 
-print(arithmetic('1', '0', '/'))
+print(arithmetic(input('Введите первое число:'), input('Введите второе число:'), input('Введите арифметический символ:')))
 
