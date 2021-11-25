@@ -1,11 +1,16 @@
-# 6) Написать функцию get_words(),
-# которая подсчитывает количество слов в тексте.
-# (В тексте может быть несколько предложений со знаками пунктуации)
-
 def get_words(text):
-    text.replace("-", "")
-    word_count = len(text.split(" "))
-    return word_count
+    start_word = False
+    word_cnt = 0
+    for symbol in text:
+        if not symbol.isalpha():
+            if start_word:
+                start_word = False
+            continue
+        else:
+            if not start_word:
+                word_cnt += 1
+            start_word = True
+    return word_cnt
 
 
 text = input("Ведите текст\n")
