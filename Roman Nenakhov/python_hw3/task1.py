@@ -12,8 +12,7 @@ def arithmetic(x, y, operation):
     elif operation == "/":
         return x / y
     else:
-        err = "Неизвестная операция"
-        return err
+        return "Неизвестная операция"
 
 
 print(arithmetic(int(input()), int(input()), input()))
