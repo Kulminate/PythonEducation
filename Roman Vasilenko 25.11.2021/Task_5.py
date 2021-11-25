@@ -4,7 +4,8 @@
 def is_prime(num=int(input('Enter number: '))):
 
     if 0 <= num <= 1000:
-
+        if num == 0:
+            return "Number is null"
         for i in range(2, num):
             if num % i == 0:
                 return False
