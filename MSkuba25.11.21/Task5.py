@@ -2,7 +2,7 @@
 # и возвращающую True, если оно простое, и False - иначе.
 def is_prime(numb=int(input("input numb 0 to 1000"))):
 
-    if numb > 1:
+    if numb >= 1:
         return "true"
     elif numb % 1:
         return "true"
