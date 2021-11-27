@@ -1,4 +1,6 @@
 def read_lines(lines, file):
+    if lines < 0:
+        raise ValueError
     d = {}
     lst = []
     cnt = 1
@@ -6,11 +8,21 @@ def read_lines(lines, file):
         for i in f.readlines():
             d.setdefault(cnt, i)
             cnt += 1
-    for i in range(lines):
+    if lines == len(d):
+        for i in d:
+            lst += [d[i]]
+    else:
         cnt -= lines
-        lst += [d[cnt]]
-        cnt += 1
-    return lst
+        for i in range(lines):
+            try:
+                lst += [d[cnt]]
+            except KeyError:
+                return ['The number of lines should be equal or less than amount of lines in the article.txt.']
+            cnt += 1
+    return [line.rstrip() for line in lst]
 
 
-print(*read_lines(3, 'article.txt'), sep='')
+try:
+    print(*read_lines(int(input('Enter a number of lines:')), 'article.txt'), sep='\n')
+except(ValueError, UnboundLocalError):
+    print('Positive digits should be used.')
