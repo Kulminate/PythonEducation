@@ -2,7 +2,7 @@
 # построчно последние строки в количестве lines.
 # Написать несколько вызовов метода как для позитивных и негативных вариантов. Функция должна обрабатывать все ситуации
 
-def read_last(file: str = 'article.txt', lines: int = 2):
+def read_last(file: str = 'article.txt', lines: int = 0):
     try:
         with open(f'{file}', 'r', encoding="utf-8") as use_file:
             data_list = use_file.readlines()
