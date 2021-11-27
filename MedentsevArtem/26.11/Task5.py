@@ -17,4 +17,7 @@ def century(year):
     return "{r[cent]} {r[era]}".format(r=result)
 
 
-print(century(input('Enter a year:')))
+try:
+    print(century(input('Enter a year:')))
+except ValueError:
+    print('Use digits as input please.')
