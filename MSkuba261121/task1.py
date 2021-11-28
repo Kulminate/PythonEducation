@@ -5,9 +5,9 @@
 
 def read_last(lines, file):
     with open(file) as temp_file:
-        scroll_lines = temp_file.readlines()
-        strings = len(scroll_lines)
-        out_line = strings - lines
+        scroll_lines = temp_file.readlines()# считываем строки из файла в список.
+        strings = len(scroll_lines) # узнаем длину
+        out_line = strings - lines # - кол-во
 
         if lines <= 0:
             print("Invalid number of lines")
