@@ -8,6 +8,8 @@ def century(era, year):
     res = str(century) + " век"
     if era == "0":
         res += " до н.э."
+    elif year == "0":
+        res = "1 век до н.э."
     else:
         res += " н.э."
     return res
