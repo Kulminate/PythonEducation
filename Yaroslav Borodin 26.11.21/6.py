@@ -5,7 +5,8 @@
 # Необходимо написать метод IsChristmasSave,
 # в него необходимо передавать путь в файл со временем, далее вычитывать
 # все время и сравнивать сумму с ожидаемой
-import datetime, time
+import datetime
+import time
 
 
 def IsChristmasSave(path):
