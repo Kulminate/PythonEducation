@@ -18,5 +18,5 @@ def print_docs(directory: str = '.'):
 
 
 
-directory = input('Enter way to directory or directory name on current folder: ')
+directory = input('Enter way to directory or directory name on current folder (try test_folder): ')
 print_docs(directory)
