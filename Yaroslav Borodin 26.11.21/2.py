@@ -9,12 +9,13 @@ import os
 def print_docs(dir):
     for dir_tuple in os.walk(dir):
         for file_name in dir_tuple[2]:
-            with open(dir_tuple[0]+"\\"+file_name, "r") as file:
+            with open(dir_tuple[0] + "\\" + file_name, "r") as file:
                 print(f"\n\n{file_name}\n")
                 file_lines = file.readlines()
                 for line in file_lines:
                     print(line)
 
 
-directory = input("Введите путь к папке\n")
+# directory = input("Введите путь к папке\n")
+directory = "test"
 print_docs(directory)
