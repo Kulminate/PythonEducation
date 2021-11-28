@@ -3,3 +3,15 @@
 # при помощи функции print_docs(directory).
 # Проход по все каталогам и файлам в определенной директории можно
 # осуществить при помощи функции walk() модуля os.
+import os
+
+
+def print_docs(directory):
+    my_docs = os.walk(directory)
+    for i in my_docs:
+        print("Содержимое директории:", i)
+        for j in i:
+            print("Содержимое подкаталога:", j)
+
+
+print_docs(input("Введите нужную директорию: "))
