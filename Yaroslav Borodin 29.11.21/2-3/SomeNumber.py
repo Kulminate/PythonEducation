@@ -23,7 +23,6 @@ class SomeNumber:
         self.__n = n
 
     def isPositive(self):
-        print(self.n > 0)
         return self.n > 0
 
     def print(self):

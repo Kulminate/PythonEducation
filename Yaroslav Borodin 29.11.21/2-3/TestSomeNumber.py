@@ -7,23 +7,21 @@ from SomeNumber import SomeNumber
 
 
 class TestSomeNumber:
-    def __init__(self, test_set=[-10, -1, 0, 1, 15]):
-        self.test_set = test_set
+    def __init__(self):
+        pass
 
     @staticmethod
     def test():
-        # for num in test_set:
-        for num in [-10, -1, 0, 1, 15]:
-            print(f"Тестируем SomeNumber на числе {num}:")
+        test_set = [-10, -1, 0, 1, 15]
+        print(f"Тестируем SomeNumber:\n")
+        for num in test_set:
 
             some_num = SomeNumber(num)
+            some_num.print()
             if some_num.n == num:
                 print("Конструктор работает корректно")
             else:
                 print("Конструктор работает некорректно")
-
-            some_num.print()
-
 
             some_num.n = num
             if some_num.n == num:
@@ -31,8 +29,9 @@ class TestSomeNumber:
             else:
                 print("Функция setter работает некорректно")
 
-            if some_num.isPositive() == num > 0:
-                print(f'test = {num > 0}')
+            meth_val = some_num.isPositive()
+            test_val = num > 0
+            if meth_val == test_val:
                 print("Функция isPositive работает корректно\n")
             else:
                 print("Функция isPositive работает некорректно\n")
