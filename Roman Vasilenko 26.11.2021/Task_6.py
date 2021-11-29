@@ -17,9 +17,7 @@ def isChristmasSave(path_file):
         with open(path_file, "r", encoding= 'utf-8') as file:
             time_list = file.readlines()
 
-        for index in range(len(time_list)):
-            if index == range(len(time_list))[-1]:
-                continue
+        for index in range(len(time_list)-1):
             time_list[index] = time_list[index][:-1]
 
         for index in range(len(time_list)):
@@ -44,4 +42,3 @@ def isChristmasSave(path_file):
 
 path = input('Enter path to file or name of file (try time.txt): ')
 isChristmasSave(path)
-
