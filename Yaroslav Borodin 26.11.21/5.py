@@ -8,8 +8,6 @@ def century(era, year):
     res = str(century) + " век"
     if era == "0":
         res += " до н.э."
-    elif year == "0":
-        res = "1 век до н.э."
     else:
         res += " н.э."
     return res
@@ -21,9 +19,9 @@ while not correct_input:
     if input_era not in ("0", "1"):
         print("Некорректный ввод эры, повторите ввод")
         continue
-    input_year = input("Введите год \n(например: 2015, 3, 564)\n")
-    if not input_year.isdigit():
-        print("Некорректный ввод года, повторите ввод")
+    input_year = input("Введите год (целое число начиная с 1) \n(например: 2015, 3, 564)\n")
+    if not input_year.isdigit() or input_year == "0":
+        print("Некорректный ввод года, повторите ввод\n")
         continue
     correct_input = True
 
