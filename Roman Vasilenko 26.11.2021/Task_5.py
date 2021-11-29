@@ -13,7 +13,7 @@ def century(year):
             elif year % 100 == 0:
                 print(f'It\'s {year // 100}st century!!')
             elif year == 0:
-                print(f'It\'s 1st century!!')
+                print(f'Do not enter ZERO!!!!!!!!!!!!!!')
             else:
                 print(f'It\'s {(year // 100)+1}st century!!')
         elif year <0:
