@@ -2,16 +2,6 @@ from SomeNumber import SomeNumber
 
 class TestSomeNumber:
 
-    # def __init__(self):
-    # # self.number = test_number
-    # @property
-    # def number(self):
-    #     return self.__number
-    #
-    # @number.setter
-    # def number(self, number):
-    #     self.__number = number
-
     test_list: list = (-10, -1, 0, 1, 15)
 
     @staticmethod
