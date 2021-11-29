@@ -40,7 +40,7 @@ class Date:
             print(e)
 
     def differenceIdDays(self, year: int, month: int, day: int):
-        return (self.checkData(2012, 5, 23) - datetime.date(year, month, day)).days
+        return (self.checkData(self.__year, self.__month, self.__day) - datetime.date(year, month, day)).days
 
 
 
