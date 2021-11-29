@@ -3,14 +3,16 @@
 def century(year):
     if len(year) > 2:
         year = int(year)
-        if year >= 0:
+        if year > 0:
             result = {'cent': int(year) // 100 + 1, 'era': 'A.D.'}
         else:
             result = {'cent': int(year) // -100 + 1, 'era': 'B.C.'}
     else:
         year = int(year)
-        if year >= 0:
+        if year > 0:
             result = {'cent': int(year) // 100 + 1, 'era': 'A.D.'}
+        elif year == 0:
+            return 'Zero is not a valid year.'
         else:
             result = {'cent': int(year) // -100 + 1, 'era': 'B.C.'}
 
