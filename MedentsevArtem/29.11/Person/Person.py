@@ -8,7 +8,10 @@ class Person():
         return f'Привет, я {self.sex}, меня зовут {self.name}, мне {self.age} лет.'
 
     def __del__(self):
-        print(f'До свидания, мистер {self.name}.')
+        if self.sex == 'мужчина':
+            print(f'До свидания, мистер {self.name}.')
+        else:
+            print(f'До свидания, миссис {self.name}.')
 
     @property
     def sex(self):
