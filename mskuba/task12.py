@@ -8,3 +8,4 @@ while a != 0 and b != 0:
         b = b % a
 
 print(a + b)
+
