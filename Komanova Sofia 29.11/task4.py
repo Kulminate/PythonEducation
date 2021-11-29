@@ -58,19 +58,20 @@ class Date:
         try:
             datetime.strptime(date, '%d/%m/%Y')
             return True
-        except Exception as e: return e
+        except: return False
 
 
 
     # def differenceIdDays(self, day: int, month: int, year: int):
-    #     # date1 = str(day) + '/' + str(month) + '/' + str(year)
-    #     date2 = str(self.__date) + '/' + str(self.__month) + '/' + str(self.__year)
-    #     try:
+    #     if Date.checkData(day,month,year):
+    #         date1 = str(day) + '/' + str(month) + '/' + str(year)
+    #         date2 = str(self.__date) + '/' + str(self.__month) + '/' + str(self.__year)
     #         if date1 < date2:
     #             date1 = timedelta(days=-day, month=-month, year=-year)
-    #             date2 = time.strptime(date2, '%d/%m/%Y')
+    #             date2 = datetime.strptime(date2, '%d/%m/%Y')
     #             return (date2 - date1).strftime("%d/%m/%Y")
-    #     except: raise "Введенной даты не существует"
+    #
+    #     else: print("Даты не существует")
 
 
 
@@ -81,8 +82,9 @@ if __name__ == '__main__':
     date1.date = 12 # метод set
     date1.month = 12 # метод set
     date1.year = 2012 # метод set
+    print(date1.date, date1.month, date1.year  )
     print(Date.checkData(30, 2, 2012))  # статический метод checkData(int day, int month, int year)
-    # print(Date.checkData(date1.date,date1.month,date1.year))
+    # print(date1.differenceIdDays(11,12,2012))
 
 
 
