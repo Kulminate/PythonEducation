@@ -4,9 +4,9 @@ import datetime
 class Date:
 
     def __init__(self, day, month, year):
-        self.day = day
-        self.month = month
-        self.year = year
+        self.__day = day
+        self.__month = month
+        self.__year = year
 
     @staticmethod
     def checkData(day=9, month=12, year=1999):
@@ -19,7 +19,7 @@ class Date:
             return True
 
     def differenceIdDays(self, day: int, month: int, year: int):
-        self_td = datetime.timedelta(self.year, self.month, self.day)
+        self_td = datetime.timedelta(self.__year, self.__month, self.__day)
         other_td = datetime.timedelta(year, month, day)
         return (self_td-other_td).days
 
