@@ -17,13 +17,13 @@ class Currency:
         if self.name == other.name:
             return self.qty+other.qty
         else:
-            print("Error: currency names are differ 'грн' - 'руб")
+            print(f"Error: currency names are differ '{self.name}' - '{other.name}'")
 
     def __sub__(self, other):
         if self.name == other.name:
             return self.qty - other.qty
         else:
-            print("Error: currency names are differ 'грн' - 'руб")
+            print(f"Error: currency names are differ '{self.name}' - '{other.name}'")
 
     @property
     def name(self):

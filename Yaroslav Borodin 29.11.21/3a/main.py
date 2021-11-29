@@ -22,11 +22,12 @@ if __name__ == "__main__":
 
     curr1.print()
     curr2.print()
+    print()
 
-    print("\n", curr1.isEqual(curr2))
+    print(curr1.isEqual(curr2))
     print(curr1.isEqual(curr1), "\n")
 
-    print("\n", curr1 + curr2)
+    print(curr1 + curr2)
     print(curr1 + curr1, "\n")
 
     print(curr1 - curr2)
