@@ -1,28 +1,30 @@
-from random import randrange
-
+# 2) Предположим, имеется следующий класс.
+# 	class SomeNumber:
+# 		self.n # единственное поле класса
+#         a) Конструктор, с одним параметром (int n, по умолчанию инициализируем 0)
+# 	b) Метод def getN() -> int;
+# 	c) Метод def setN() -> None;
+# 	d) Метод print();
+# 			который выводит строку, напр: "Число: 5"
+# 	e) Метод isPositive() -> boolean; // которые возвращает true,
+# 	если число положительное и false, если число отрицательное
 
 class SomeNumber:
-    n = 0
 
     def __init__(self, n):
         self.n = n
 
     @property
     def n(self):
-        return self.__firstname
+        return self.__n
 
-    @firstname.setter
+    @n.setter
     def n(self, n):
-        if n.isdigit():
-            self.__n = int(n)
-        else:
-            raise ValueError
+        self.__n = n
+
+    def isPositive(self):
+        print(self.n > 0)
+        return self.n > 0
 
     def print(self):
-        print(f'Число: {self.__n}')
-
-    def isBooleen(self):
-        return f'firstname: {self.__firstname}, surname: {self.__lastname}'
-
-    def __del__(self):
-        print(f'Досвидания, мистер {self.__firstname} {self.__lastname} \n(efficiency: {self.efficiency})')
+        print(f'Число: {self.n}')
