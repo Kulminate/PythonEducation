@@ -1,0 +1,5 @@
+nums = input("Введите числа, раздленные запятой: ").split(",")
+list_nums = list(nums)
+print(list_nums)
+tuple_nums = tuple(nums)
+print(tuple_nums)
