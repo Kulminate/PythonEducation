@@ -11,15 +11,20 @@ class Date:
 
     @day.setter
     def day(self, day):
-        self.__day = day
-
+        if Date.check_data(day=day):
+            self.__day = day
+        else:
+            raise ValueError('Day value incorrect')
     @property
     def month(self):
         return self.__month
 
     @month.setter
     def month(self, month):
-        self.__month = month
+        if Date.check_data(month=month):
+            self.__month = month
+        else:
+            raise ValueError('Month value incorrect')
 
     @property
     def year(self):
@@ -27,7 +32,10 @@ class Date:
 
     @year.setter
     def year(self, year):
-        self.__year = year
+        if Date.check_data(year=year):
+            self.__year = year
+        else:
+            raise ValueError('Year value incorrect')
 
     def __str__(self):
         if 1 <= self.__month <= 9:
@@ -36,7 +44,7 @@ class Date:
             return f'{self.day}.{self.__month}.{self.__year}'
 
     @staticmethod
-    def check_data(day: int, month: int, year: int):
+    def check_data(day: int = 1, month: int = 1, year: int = 1):
         if 1 <= day <= 31 and 1 <= month <= 12 and 1 <= year <= 9999:
             print('Date is valid')
             return True
