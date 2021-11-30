@@ -11,19 +11,20 @@ class SomeNumber:
     def n(self, n):
         self.__n = n
 
-    def getN(self):
+    def getN(self) -> int:
         return int(self.__n)
 
-    def setN(self):
-        return None
+    def setN(self, number) -> None:
+        self.__n = number
 
     def print(self):
         return print(f'Number is {self.__n}')
 
-    def isPositive(self):
+    def isPositive(self) -> bool:
         if self.__n > 0:
-            return 'positive'
+            return True
         elif self.__n < 0:
-            return 'negative'
+            return False
         elif self.__n == 0:
-            return 'null'
+            return None
+
