@@ -19,7 +19,7 @@ class TestSomeNumber():
             print(t.getN())
         for i in self.var:
             t = SomeNumber(i)
-            print(t.setN())
+            print(t.setN(i))
         return 'Test is ended.'
 
 

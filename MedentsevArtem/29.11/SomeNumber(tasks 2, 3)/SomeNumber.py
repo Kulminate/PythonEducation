@@ -10,22 +10,22 @@
 # 	положительное и false, если число отрицательное
 class SomeNumber():
 
-    def __init__(self, n=0):
-        self.n = int(n)
+    def __init__(self, n=0) -> int:
+        self._n = n
 
     def getN(self) -> int:
-        return int(self.n)
+        return self._n
 
-    def setN(self) -> None:
-        return None
+    def setN(self, n: int) -> None:
+        self._n = n
 
     def print(self):
-        print('Число:', self.n)
+        print('Число:', self._n)
 
     def isPositive(self) -> bool:
-        if self.n > 0:
+        if self._n > 0:
             return True
-        elif self.n == 0:
+        elif self._n == 0:
             return None
         else:
             return False
