@@ -43,7 +43,7 @@ class Person():
         elif s.lower() == 'ж' or s.lower() == 'женский' or s.lower() == 'женщина':
             self.__sex = 'женщина'
         else:
-            raise ValueError
+            raise ValueError("Invalid data")
 
     @property
     def age(self) -> str:
