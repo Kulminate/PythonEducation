@@ -10,48 +10,54 @@
 # - ** реализовать метод differenceIdDays(day: int, month: int, year: int), который принимает другую дату
 # и вычисляет разницу в днях между датами
 # - протестировать работу методов
-from datetime import time, datetime, timedelta
+from datetime import time, datetime, timedelta, date
 class Date:
-    def __init__(self, date:int, month:int, year:int):
-        self.__date = date
+    def __init__(self, day:int, month:int, year:int):
+        self.__day = day
         self.__month = month
         self.__year = year
 
-    def print(self):
-        print(f"{self.__date}/{self.__month}/{self.__year}")
 
     @property
-    def date(self):
-        return self.__date
+    def day(self)-> int:
+        return self.__day
 
-    @date.setter
-    def date(self, date):
+    @day.setter
+    def day(self, day:int)-> None:
         try:
-            self.__date = int(date)
+            if Date.checkData(day,self.__month,self.__year): #проверка checkData
+                self.__day = day
+            else: print("Такой даты не существует")
         except ValueError as e:
             print(e)
 
     @property
-    def month(self):
+    def month(self) -> int:
         return self.__month
 
     @month.setter
-    def month(self, month):
+    def month(self, month:int) -> None:
         try:
-            self.__month = int(month)
+            if Date.checkData(self.__day, month, self.__year): #проверка checkData
+                self.__month = month
+            else: print("Такого месяца не существует")
+
         except ValueError as e:
             print(e)
 
     @property
-    def year(self):
+    def year(self)-> int:
         return self.__year
 
     @year.setter
-    def year(self, year):
+    def year(self, year:int)-> None:
         try:
-            self.__year = int(year)
+            if Date.checkData(self.__day, self.__month, year): #проверка checkData
+                self.__year = year
+            else: print("Такого года не существует")
         except ValueError as e:
             print(e)
+
     @staticmethod
     def checkData(day:int, month:int, year:int):
         date = str(day)+'/'+ str(month)+'/'+str(year)
@@ -62,29 +68,29 @@ class Date:
 
 
 
-    # def differenceIdDays(self, day: int, month: int, year: int):
-    #     if Date.checkData(day,month,year):
-    #         date1 = str(day) + '/' + str(month) + '/' + str(year)
-    #         date2 = str(self.__date) + '/' + str(self.__month) + '/' + str(self.__year)
-    #         if date1 < date2:
-    #             date1 = timedelta(days=-day, month=-month, year=-year)
-    #             date2 = datetime.strptime(date2, '%d/%m/%Y')
-    #             return (date2 - date1).strftime("%d/%m/%Y")
-    #
-    #     else: print("Даты не существует")
-
+    def differenceIdDays(self, day: int, month: int, year: int):
+        if Date.checkData(day,month,year):
+            date1 = date(year, month, day)
+            date2 = date(self.__year, self.__month, self.__day)
+            if date1 <date2:
+                date1,date2=date2,date1
+            count_days = date1-date2
+            print("Разница в днях:",count_days)
+        else: return "Даты не существует"
 
 
 
 if __name__ == '__main__':
 
     date1 = Date(12,3,2012)
-    date1.date = 12 # метод set
+    print(date1.month)
+    date1.day= 40 # метод set
+    print(date1.day)
     date1.month = 12 # метод set
     date1.year = 2012 # метод set
-    print(date1.date, date1.month, date1.year  )
-    print(Date.checkData(30, 2, 2012))  # статический метод checkData(int day, int month, int year)
-    # print(date1.differenceIdDays(11,12,2012))
+    print(date1.day, date1.month, date1.year)
+    print(Date.checkData(12, 2, 2011))  # статический метод checkData(int day, int month, int year)
+    date1.differenceIdDays(11,11,2012) # метод differenceIdDays(self, day: int, month: int, year: int)
 
 
 
