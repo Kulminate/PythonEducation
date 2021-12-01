@@ -19,15 +19,14 @@ class Date:
             print("Корректная дата")
             return True
 
-    # - ** реализовать
-    # метод differenceIdDays(day: int, month: int, year: int), который принимает другую
-    # дату и вычисляет разницу в днях между датами
+
     def differenceIdDays(self, day: int, month: int, year: int) -> datetime:
-        self_td = datetime.timedelta(self.__year, self.__month, self.__day)
-        print(self_td)
-        other_td = datetime.timedelta(year, month, day)
-        print(other_td)
-        return (self_td - other_td).days
+        # self_td = datetime.timedelta(self.__year, self.__month, self.__day)
+        # print(self_td)
+        # other_td = datetime.timedelta(year, month, day)
+        # print(other_td)
+        # return (self_td - other_td).days
+        pass
 
     @property
     def day(self) -> int:
