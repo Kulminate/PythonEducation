@@ -8,21 +8,25 @@
 from task2 import SomeNumber
 
 class TestSomeNumber:
-    if __name__ == '__main__':
-        d = SomeNumber() #проверить работу конструкторов
-        print("d:", d.num)
-        a = SomeNumber(-10)
-        print("a:", a.num)
-        c = SomeNumber()
-        c.num = -1 #проверить работу метода setN()
-        print("c:", c.num)
-        e = SomeNumber(1)
-        print("e:", e.num)
-        f = SomeNumber(15)
-        print("f:", f.num)
-        f.isPositive() # проверить работу метода isPositive();
-        c.isPositive()
-        d.isPositive()
+    def __init__(self, *test_date):
+        self.date = test_date
+
+    def test(self):
+        for i in self.date:
+            print(f"Проверка числа {i}")
+            some_num = SomeNumber()
+            print(f'Проверка работы конструктора:  {some_num.num}')
+            some_num.num = i
+            print(f'Проверка работы setN():  {some_num.num}')
+            print("Проверка работы метода isPositive()")
+            some_num.isPositive()
+
+
+
+if __name__ == '__main__':
+    data = TestSomeNumber(-10, -1, 0, 1, 15)
+    data.test()
+
 
 
 
