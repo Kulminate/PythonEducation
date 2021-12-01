@@ -11,19 +11,23 @@
 
 class SomeNumber:
 
-    def __init__(self, n):
+    def __init__(self, n: int) -> None:
         self.n = n
 
     @property
-    def n(self):
+    def n(self) -> int:
         return self.__n
 
     @n.setter
-    def n(self, n):
+    def n(self, n: int) -> None:
         self.__n = n
 
-    def isPositive(self):
-        return self.n > 0
+    def isPositive(self) -> bool:
+        if self.n != 0:
+            return self.n > 0
+        else:
+            print("Ноль не позитивное и не негативное число")
+            return False
 
-    def print(self):
+    def print(self) -> None:
         print(f'Число: {self.n}')

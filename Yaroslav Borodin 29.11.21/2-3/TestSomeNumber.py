@@ -7,11 +7,11 @@ from SomeNumber import SomeNumber
 
 
 class TestSomeNumber:
-    def __init__(self):
+    def __init__(self) -> None:
         pass
 
     @staticmethod
-    def test():
+    def test() -> None:
         test_set = [-10, -1, 0, 1, 15]
         print(f"Тестируем SomeNumber:\n")
         for num in test_set:
@@ -35,3 +35,7 @@ class TestSomeNumber:
                 print("Функция isPositive работает корректно\n")
             else:
                 print("Функция isPositive работает некорректно\n")
+
+
+if __name__ == "__main__":
+    TestSomeNumber().test()
