@@ -10,36 +10,36 @@
 # - ** реализовать метод differenceIdDays(day: int, month: int, year: int), который принимает другую дату
 # и вычисляет разницу в днях между датами
 # - протестировать работу методов
-from datetime import time, datetime, timedelta, date
+from datetime import  datetime,  date
 class Date:
     def __init__(self, day:int, month:int, year:int):
-        self.__day = day
-        self.__month = month
-        self.__year = year
+        self._day = day
+        self._month = month
+        self._year = year
 
 
     @property
     def day(self)-> int:
-        return self.__day
+        return self._day
 
     @day.setter
     def day(self, day:int)-> None:
         try:
-            if Date.checkData(day,self.__month,self.__year): #проверка checkData
-                self.__day = day
+            if Date.checkData(day, self._month, self._year): #проверка checkData
+                self._day = day
             else: print("Такой даты не существует")
         except ValueError as e:
             print(e)
 
     @property
     def month(self) -> int:
-        return self.__month
+        return self._month
 
     @month.setter
     def month(self, month:int) -> None:
         try:
-            if Date.checkData(self.__day, month, self.__year): #проверка checkData
-                self.__month = month
+            if Date.checkData(self._day, month, self._year): #проверка checkData
+                self._month = month
             else: print("Такого месяца не существует")
 
         except ValueError as e:
@@ -47,13 +47,13 @@ class Date:
 
     @property
     def year(self)-> int:
-        return self.__year
+        return self._year
 
     @year.setter
     def year(self, year:int)-> None:
         try:
-            if Date.checkData(self.__day, self.__month, year): #проверка checkData
-                self.__year = year
+            if Date.checkData(self._day, self._month, year): #проверка checkData
+                self._year = year
             else: print("Такого года не существует")
         except ValueError as e:
             print(e)
@@ -71,7 +71,7 @@ class Date:
     def differenceIdDays(self, day: int, month: int, year: int):
         if Date.checkData(day,month,year):
             date1 = date(year, month, day)
-            date2 = date(self.__year, self.__month, self.__day)
+            date2 = date(self._year, self._month, self._day)
             if date1 <date2:
                 date1,date2=date2,date1
             count_days = date1-date2
