@@ -30,27 +30,27 @@ class Date:
 
     @property
     def day(self) -> int:
-        return self._day
+        return self.__day
 
     @property
     def year(self) -> int:
-        return self._year
+        return self.__year
 
     @property
     def month(self) -> int:
-        return self._month
+        return self.__month
 
     @day.setter
     def day(self, day: int) -> None:
         if Date.checkData(day=day):
-            self._day = day
+            self.__day = day
         else:
             raise ValueError
 
     @year.setter
     def year(self, year: int) -> None:
         if Date.checkData(year=year):
-            self._year = year
+            self.__year = year
         else:
             raise ValueError
 
