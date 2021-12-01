@@ -75,8 +75,8 @@ class Date:
             if date1 <date2:
                 date1,date2=date2,date1
             count_days = date1-date2
-            print("Разница в днях:",count_days)
-        else: return "Даты не существует"
+            print("Разница в днях:",count_days.days)
+        else: return "Переданной даты не существует"
 
 
 
