@@ -13,6 +13,8 @@
 # 		принимает другую дату и вычисляет разницу в днях между датами
 # 		- протестировать работу методов
 from datetime import timedelta
+
+
 class Date():
     def __init__(self, y: int, m: int, d: int):
         self.y = y
@@ -52,24 +54,38 @@ class Date():
             raise UnboundLocalError('Not enough data.')
         else:
             if d is not None and type(d) != Date:
-                if d > 31:
+                try:
+                    if int(d) > 31:
+                        raise ValueError('Incorrect data.')
+                except TypeError:
                     raise ValueError('Incorrect data.')
             if m is not None:
-                if m > 12:
+                try:
+                    if int(m) > 12:
+                        raise ValueError('Incorrect data.')
+                except TypeError:
                     raise ValueError('Incorrect data.')
             if y is not None:
-                if y > 2200:
+                try:
+                    if int(y) > 2200:
+                        raise ValueError('Incorrect data.')
+                except TypeError:
                     raise ValueError('Incorrect data.')
             else:
                 return True
 
     def differenceIdDays(self, other) -> str:
         if self.checkData(self) and other.checkData(other):
-            a = timedelta(days=(self._d+self._m*30+self._y*365)) - timedelta(days=(other._d+other._m*30+other._y*365))
+            a = timedelta(days=(int(self._d)
+                                + int(self._m) * 30
+                                + int(self._y) * 365)) \
+              - timedelta(days=(int(other._d)
+                                + int(other._m) * 30
+                                + int(other._y) * 365))
             time = a.days
             print(time)
-            yy = time//365
-            time -= yy*365
-            mm = time//31
-            time -= mm*31
+            yy = time // 365
+            time -= yy * 365
+            mm = time // 31
+            time -= mm * 31
             return f'{yy} г., {mm} м., {time} д.'

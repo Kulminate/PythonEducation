@@ -11,6 +11,8 @@
 class SomeNumber():
 
     def __init__(self, n=0) -> int:
+        if n != int:
+            raise ValueError("int values should be used")
         self._n = n
 
     def getN(self) -> int:

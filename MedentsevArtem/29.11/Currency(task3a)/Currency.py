@@ -23,15 +23,18 @@ class Currency():
         return self.__qty
 
     @qty.setter
-    def qty(self, qty):
-        self.__qty = float(qty)
+    def qty(self, qty) -> None:
+        try:
+            self.__qty = float(qty)
+        except(ValueError, UnboundLocalError, TypeError):
+            raise ValueError("Invalid data.")
 
     @property
-    def name(self):
+    def name(self) -> str:
         return self.__name
 
     @name.setter
-    def name(self, name):
+    def name(self, name) -> None:
         if name == "грн" or name == "руб" or name == "$":
             self.__name = str(name)
         else:
@@ -48,12 +51,12 @@ class Currency():
 
     def __add__(self, other):
         if self.__name == other.__name:
-            return self.__qty + other.__qty
+            return f"{self.__qty + other.__qty} {self.name}"
         else:
             raise ValueError(f"Error: currency names are differ \'{self.__name}\' - \'{other.__name}\'")
 
     def __sub__(self, other):
         if self.__name == other.__name:
-            return self.__qty - other.__qty
+            return f"{self.__qty - other.__qty} {self.name}"
         else:
             raise ValueError(f"Error: currency names are differ \'{self.__name}\' - \'{other.__name}\'")

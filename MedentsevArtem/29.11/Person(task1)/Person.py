@@ -17,21 +17,27 @@ class Person():
         self.age = age
         self.sex = sex
 
-    def __str__(self):
-        return f'Привет, я {self.sex}, меня зовут {self.name}, мне {self.age} лет.'
+    def __str__(self) -> str:
+        try:
+            return f'Привет, я {self.sex}, меня зовут {self.name}, мне {self.age} лет.'
+        except AttributeError:
+            raise ValueError("Invalid data.")
 
-    def __del__(self):
-        if self.sex == 'мужчина':
-            print(f'До свидания, мистер {self.name}.')
-        else:
-            print(f'До свидания, миссис {self.name}.')
+    def __del__(self) -> None:
+        try:
+            if self.sex == 'мужчина':
+                print(f'До свидания, мистер {self.name}.')
+            else:
+                print(f'До свидания, миссис {self.name}.')
+        except AttributeError:
+            raise ValueError("Invalid data.")
 
     @property
-    def sex(self):
+    def sex(self) -> str:
         return self.__sex
 
     @sex.setter
-    def sex(self, s):
+    def sex(self, s) -> None:
         if s.lower() == 'м' or s.lower() == 'мужской' or s.lower() == 'мужчина':
             self.__sex = 'мужчина'
         elif s.lower() == 'ж' or s.lower() == 'женский' or s.lower() == 'женщина':
@@ -40,13 +46,24 @@ class Person():
             raise ValueError
 
     @property
-    def age(self):
+    def age(self) -> str:
         return self.__age
 
     @age.setter
-    def age(self, a):
+    def age(self, a) -> None:
         if a.isdigit():
             if 16 <= int(a) <= 65:
                 self.__age = a
             else:
-                raise ValueError
+                raise ValueError("Age should be between 16 and 65.")
+
+    @property
+    def name(self) -> str:
+        return self.__name
+
+    @name.setter
+    def name(self, n) -> None:
+        if n.isalpha():
+            self.__name = n
+        else:
+            raise ValueError

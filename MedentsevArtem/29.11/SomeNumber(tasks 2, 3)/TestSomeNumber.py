@@ -24,6 +24,6 @@ class TestSomeNumber():
 
 
 if __name__ == "__main__":
-    a = TestSomeNumber([-10, -1, 0, 1, 15])
+    a = TestSomeNumber([[1.2], -1, 0, 1, 15])
     print(a.test())
 
