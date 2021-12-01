@@ -16,7 +16,7 @@
 # которые увелечивают на единицу значение секунды, минуты и часа соответственно,
 # при чем если кол-во часов достигается 24, то должно увеличиться на единицу значение поля day из базового класса
 
-from KomanovaSofia2911.task4 import Date
+from Komanova_Sofia_29_11.task4 import Date
 from datetime import timedelta, datetime
 
 class DateTime(Date):
