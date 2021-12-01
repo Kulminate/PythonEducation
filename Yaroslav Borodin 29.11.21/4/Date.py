@@ -19,14 +19,10 @@ class Date:
             print("Корректная дата")
             return True
 
-
-    def differenceIdDays(self, day: int, month: int, year: int) -> datetime:
-        # self_td = datetime.timedelta(self.__year, self.__month, self.__day)
-        # print(self_td)
-        # other_td = datetime.timedelta(year, month, day)
-        # print(other_td)
-        # return (self_td - other_td).days
-        pass
+    def differenceIdDays(self, day: int, month: int, year: int) -> int:
+        self_td = datetime.timedelta(self.__day + self.__year * 365 + self.__month * 31)
+        other_td = datetime.timedelta(day + year * 365 + month * 31)
+        return abs((self_td - other_td).days)
 
     @property
     def day(self) -> int:
@@ -57,6 +53,6 @@ class Date:
     @month.setter
     def month(self, month: int) -> None:
         if Date.checkData(month=month):
-            self._month = month
+            self.__month = month
         else:
             raise ValueError
