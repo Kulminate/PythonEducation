@@ -1,7 +1,9 @@
+from typing import List
+
 from Person import Person
 
 
-def fire_person(persons):
+def fire_person(persons: List[Person]) -> None :
     min_eff = persons[0].efficiency
     min_index = 0
     for i in range(1, len(persons)):
