@@ -1,17 +1,18 @@
 from SomeNumber import SomeNumber
 
 class TestSomeNumber:
-    def get(self):
-        return SomeNumber().getN()
+    def __init__(self, num):
+        self.num = num
 
-    def set(self):
-        return SomeNumber().setN(-10)
+    def test(self):
+        for i in self.num:
+            print(SomeNumber(i).getN())
+            print(SomeNumber(i).setN(i))
+            print(SomeNumber(i).isPositive())
 
-    def isPos(self):
-        return SomeNumber().isPositive()
 
 
-test = TestSomeNumber()
-print(test.get())
-print(test.set())
-print(test.isPos())
+if __name__ == "__main__":
+
+    t = TestSomeNumber([-10, -1, 0, 1, 15])
+    print(t.test())
