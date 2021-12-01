@@ -26,7 +26,7 @@ class SomeNumber():
         if self._n > 0:
             return True
         elif self._n == 0:
-            return None
+            raise ValueError("Zero is neither positive nor negative.")
         else:
             return False
 
