@@ -5,9 +5,11 @@
 # Объект b может быть чем угодно, но чаще всего он бывает объектом того же класса.
 # Объект b будет автоматически передаваться в метод __add__() в качестве второго аргумента (первый – self).
 
-from Pig import Pig
-from Cat import Cat
-from Dog import Dog
+from Stick import Stick
+from Metal import Metal
 
 if __name__ == "__main__":
-    print(Pig()+Dog())
+    metal = Metal(5)
+    stick = Stick(1)
+    print(metal + stick)
+    print(stick + metal)
