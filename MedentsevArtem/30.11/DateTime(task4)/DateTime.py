@@ -58,7 +58,7 @@ class DateTime(Date):
             s = h
             h = None
             minute = None
-        if not h and not minute and not s:
+        if not h and not minute and not s and h != 0 and minute != 0 and s != 0:
             raise UnboundLocalError('Not enough data.')
         else:
             if h is not None and type(h) != Date:
@@ -104,7 +104,7 @@ class DateTime(Date):
             s = y
             y = None
             m = None
-        if not y and not m and not d and not h and not minute and not s:
+        if not y and not m and not d and not h and not minute and not s and y != 0 and m != 0 and d != 0 and h != 0 and minute != 0 and s != 0:
             raise UnboundLocalError('Not enough data.')
         else:
             if y is not None and type(y) != Date:
