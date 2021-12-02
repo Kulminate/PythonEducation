@@ -8,7 +8,7 @@
 import math
 class Table:
     def square(self):
-        return 'метод должен быть переопределен у наследника'
+        raise 'метод должен быть переопределен у наследника'
 
 class Rectangle_table(Table):
 
@@ -28,8 +28,8 @@ class Round_table(Table):
         return math.pi * pow(self.radius,2)
 
 if __name__== '__main__':
-    t0 = Table()
-    print(t0.square())
+    # t0 = Table()
+    # print(t0.square())
     t1 = Rectangle_table(2,3)
     print(t1.square())
     t2 = Round_table(2)
