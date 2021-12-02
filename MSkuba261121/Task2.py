@@ -13,7 +13,7 @@ def print_docs(directory):
 
 print(print_docs("D:\directory1"))
 
-# "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" C:/Users/Maks/PycharmProjects/PythonEducation/MSkuba261121/Task2.py
+# "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python37_64\python.exe" C:/Users/Maks/PycharmProjects/PythonEducation/MSkuba261121/Task2ClassSomeNumber.py
 # ('D:\\directory1', ['Folder1', 'Folder2'], [])
 # ('D:\\directory1\\Folder1', [], ['firs.txt'])
 # ('D:\\directory1\\Folder2', [], ['Second.txt', 'third.txt'])
