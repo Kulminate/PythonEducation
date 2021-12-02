@@ -59,6 +59,8 @@ class Date():
             d = y
             y = None
             m = None
+        else:
+            pass
         if not d and not m and not y and d != 0 and m != 0 and y != 0:
             raise UnboundLocalError('Not enough data.')
         else:
