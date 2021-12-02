@@ -4,6 +4,12 @@ class Overload:
 
     def __add__(self, other, other2=None):
         if other2 != None:
-            return f"{self.a + other.a + other2.a}"
+            try:
+                return f"{self.a + other.a + other2.a}"
+            except(ValueError, UnboundLocalError, TypeError):
+                raise ValueError("The given data is wrong.")
         else:
-            return f"{self.a + other.a}"
+            try:
+                return f"{self.a + other.a}"
+            except(ValueError, UnboundLocalError, TypeError):
+                raise ValueError("The given data is wrong.")
