@@ -9,7 +9,7 @@ class Date:
         self.__day = day
 
     @staticmethod
-    def checkData(year, month, day) -> bool:
+    def checkData(year=2000, month=6, day=15) -> bool:
         try:
             datetime.date(year, month, day)
         except ValueError:

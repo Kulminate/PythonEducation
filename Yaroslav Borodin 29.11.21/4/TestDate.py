@@ -13,7 +13,7 @@ class TestDate:
         print(f"Тестируем Date.checkData()")
         for i in test_set1:
             print(i[0])
-            if Date.checkData(year=i[0]["year"], day=i[0]["day"], month=i[0]["month"]) == i[1]:
+            if Date.checkData(i[0]["year"], i[0]["month"], i[0]["day"]) == i[1]:
                 print("Успешно\n")
             else:
                 print("Не успешно\n")
@@ -23,8 +23,8 @@ class TestDate:
         print(f"Тестируем Date.differenceIdDays()")
         for i in test_set2:
             print(i[0], "\n", i[1])
-            date1 = Date(i[0]["day"], i[0]["month"], i[0]["year"])
-            if date1.differenceIdDays(i[1]["day"], i[1]["month"], i[1]["year"]) == i[2]:
+            date1 = Date(i[0]["year"], i[0]["month"], i[0]["day"])
+            if date1.differenceIdDays(i[1]["year"], i[1]["month"], i[1]["day"]) == i[2]:
                 print("Успешно\n")
             else:
                 print("Не успешно\n")

@@ -7,4 +7,4 @@ class RectangleDesk(Desk):
         self.__b = b
 
     def calculate_area(self) -> float:
-        return __a * __b
+        return self.__a * self.__b

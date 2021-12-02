@@ -1,7 +1,7 @@
 from DateTime import DateTime
 
 if __name__ == "__main__":
-    dt = DateTime(2000, 12, 6, 15, 6, 15)
+    dt = DateTime(2000, 12, 6, 23, 59, 59)
 
     print(DateTime.checkDateTime(1999, 12, 6, 41, 6, 41))  # Incorrect
     print(DateTime.checkDateTime(2013, 19, 6, 15, 6, 15))   # Incorrect

@@ -7,4 +7,4 @@ class RoundDesk(Desk):
         self.__r = r
 
     def calculate_area(self) -> float:
-        return pi * r ** 2
+        return pi * self.__r ** 2
