@@ -30,11 +30,6 @@ class DateTime(Date):
         self.__min = minute
         self.__sec = seconds
 
-    # @property
-    # def day(self):
-    #     super().day
-
-
 
     # доступ к полям должен быть через get/set
     @property
@@ -124,8 +119,8 @@ class DateTime(Date):
 
 if __name__ == '__main__':
         first = DateTime(20,11,2011,23,34,60)
-        # first.month= 3
-        # print(first.month)
+        first.year= 2012
+        print(first)
         print("checkTime:")
         DateTime.checkTime(12,12,12)
         print("checkTime:")
