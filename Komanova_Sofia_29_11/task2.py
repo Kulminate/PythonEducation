@@ -25,7 +25,7 @@ class SomeNumber :
     @num.setter
     def num(self, new_n:int):
         try:
-            self.__n = int(new_n)
+            self.__n = new_n
         except ValueError as e:
             print(e)
 
@@ -34,10 +34,14 @@ class SomeNumber :
 
     def isPositive(self):
         if self.__n >0:
-            print( 'True')
+            print(f"Число {self.__n} положительное")
+            return True
         elif self.__n == 0:
-            print("ни положительное, ни отрицательное")
-        else: print( 'False')
+            print(f"{self.__n} ни положительное, ни отрицательное")
+        else:
+            print(f'Число {self.__n} отрицательное')
+            return False
+
 
 
 
